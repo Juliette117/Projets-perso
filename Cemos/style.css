@@ -1,0 +1,193 @@
+img
+{
+	padding-top: 100px;
+    padding-left:100px;
+    margin-left: 120px;
+    border-bottom: 1px solid grey; ;
+}
+
+.cadre {
+    width: 100%;
+    height: 100%;
+    border: 20px solid black;
+    position: fixed;
+    margin: -10px;
+}
+
+h1
+{
+	padding-left:120px;
+
+}
+
+p
+{	
+	padding-left:120px;
+	color:grey;	
+
+}
+
+h1,p {
+    margin:0;
+}
+
+h5{
+    padding-left:120px;
+    color:grey;
+}
+
+p,h5 {
+    margin-bottom: 100px;
+}
+
+.a{
+    padding-left:110px;
+    font-size: 40px;
+    color:black;
+    font-family: Arial;
+
+}
+
+h5,.a {
+    margin:10px;}
+
+
+
+.box {
+    display: flex;
+    column-gap: 30px;
+}
+
+.div1{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 13px;
+    color:grey;
+    padding-left: 110px;
+    padding-top: 15px;
+}
+
+
+
+.div3{
+    border-bottom:4px solid black;
+}
+
+ .b{
+    color:black;
+    padding-left: 40px;
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 620px;
+}
+
+.a,.b {margin-bottom: 40px;}
+
+
+
+.b,.c {margin: 30px}
+
+
+
+.c,.d {margin-bottom: 100px}
+
+.e
+{
+  color:black;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.d,.e {margin-bottom: 30px}
+
+.f
+{
+    border-left: 4px solid black;
+    padding-left: 40px;
+    font-size: 24px;
+    font-style: italic;
+    
+}
+
+.c
+{
+    color:black;
+    padding-left: 40px;
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 620px;
+}
+
+
+.d
+{
+    color:black;
+    padding-left: 40px;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+.d,.f {margin-bottom: 0;}
+
+
+.g
+{
+    border-left: 4px solid black;
+    padding-left: 65px;
+    font-size: 24px;
+    font-style: italic;
+}
+.f,.g{margin-bottom: 0}
+
+
+
+
+
+
+
+
+.a2
+{
+    color: black;
+    font-family: Arial;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top:4px solid black;
+    padding-left:0;
+}
+
+.a3
+{
+    color: #6B89D9;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+    padding-left:0;
+    
+    
+}
+
+
+
+
+.a2,.a3 {margin-bottom: 5px}
+
+
+
+
+
+.a, .div1 {margin:20px;}
+.a, .div2 {margin:20px;}
+.a, .div3 {margin: 20px;}
+
+
+
+
+#searchbar
+{
+    padding-top: 0;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+

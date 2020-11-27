@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<link rel = "stylesheet" href = "style.css">
+
+
+
+<div class="cadre"></div>
+
+<title>Cemos.fr</title>
+</head>
+
+<body>
+	  <img src="./IMG/momos.png" alt="momos">
+
+  <h1>Cemos.fr</h1>
+  <p>Sys Sec and other stuff</p>
+
+  <h5>MISE EN AVANT</h5>
+  <p class= "a"><strong>Reverse Proxy Nginx (Quick and Dirty)</strong></p>
+
+
+
+<div class="box">
+          <div>
+          	<p class="div1">Sys<br>
+          	Laisser un commentaire
+          </p>
+          </div>
+
+          <div>
+           <p class="div2"> 
+           	   <p class="b">Bonjour,<br>
+ <p class ="c">Dans cet article nous allons voir comment installer et configurer nginx en
+  	           tant que reverse proxy pour une appli qui écouterait sur un port local du
+  	           serveur (nodejs, docker, toussa toussa).</p> 
+ <p class="b">1: Installation de nginx :</p>
+ <p class="b">Sous debian like:</p>
+ <p class="f">#apt-get install nginx</p>
+ <p class="d">Sous RH like :</p>
+ <p class="f">#yum install nginx</p>
+ <p class= "b">2: Configuration de nginx (http only)</p>
+ <p class= "b">Dans le repertoire /etc/nginx/sites-enabled , il faudra créer un fichier de<br>
+               configuration. Nous prendrons comme exemple la configuration du site<br>
+               toto.com, avec une appli écoutant sur le port 8080 interne . On peut donc<br>
+               créer le fichier /etc/nginx/sites-enabled/toto.com.conf avec le contenu<br>
+               suivant :</p>
+ <p class="f">server {<br></p>
+ <p class="g">listen 80;<br>
+              server_name toto.com www.toto.com;<br>
+              access_log /var/log/nginx/toto.com.log;<br>
+              error_log      /var/log/nginx/toto.com.err;<br>
+              location / { proxy_pass http://127.0.0.1:8080/;<br>
+              }<br></p>
+ <p class="f">}</p>
+ <p class="d">On redémarre nginx :</p>
+ <p class="f">service nginx restart</p>
+ <p class="d">Donc la nous avons configuré le reverse-proxy pour le site toto.com en http,<br>
+              le minimum syndical serait de le sécuriser avec https, et une redirection<br>
+              automatique du http vers https.<br>
+              3: Générer un certificat avec letsencrypt<br>
+              On sous-entend que le domaine toto.com pointe bien vers l’ip de votre<br>
+              serveur.<br>
+              On va ensuite installer certbot, pour cela je vous invite a suivre la<br>
+              documentation officielle : <a href="https://certbot.eff.org/docs/install.html">https://certbot.eff.org/docs/install.html</a><br>
+              Une fois certbot installé, le lancer, dans notre cas avec le plugin nginx :</p>
+<p class="f">certbot –nginx</p>
+
+          </div>
+
+
+
+          <div>
+          	<p class="div3">      		
+         
+          <div>
+          <div id="searchbar">
+            <input type="text" placeholder="Recherche..." size= "30">
+            <button type="submit">🔍</button>
+         </form><br>
+           
+    </div>
+	      <p class= "a2"><strong>ARTICLES RÉCENTS</strong></p>
+
+	      <p class="a3">
+            <font color = "black"> &bull; </font>Vulnhub DC: 2 Write<br>
+            <font color = "black"> &bull; </font>Reverse Proxy Nginx (Quick and Dirty)<br>
+            <font color = "black"> &bull; </font>Write Up: FIC 2020 CDAISI epreuve 6.1<br>  
+          </p>
+          
+          <p class= "a2"><strong>ARCHIVES</strong></p>
+	     
+	      <p class="a3">
+            <font color = "black"> &bull; </font>avril 2020<br>
+            <font color = "black"> &bull; </font>mars 2020<br>
+            <font color = "black"> &bull; </font>février 2020<br>  
+          </p>
+
+          <p class= "a2"><strong>CATÉGORIES</strong></p>
+
+          <p class="a3">
+            <font color = "black"> &bull; </font>Sys<br>
+            <font color = "black"> &bull; </font>vulnhub<br>
+            <font color = "black"> &bull; </font>Write Up<br>  
+          </p>
+
+
+
+
+         </div>
+         
+   
+    
+ </div>
+
+
+
+
+</body>
+
+
+
+
+</html>
+
