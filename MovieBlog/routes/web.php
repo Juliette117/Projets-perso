@@ -30,9 +30,9 @@ Route::get('/articles', [MainController::class, 'index'])->name('articles');
 //Affiche article 
 Route::get('/articles/{article:slug}', [MainController::class, 'show'])->name('article');
 
-Route::prefix('admin')->middleware('admin')->group(function(){
-    //Affiche page admin
-    Route::get('/articles', [ArticleController::class, 'index'])->name('admin');
+// Route::prefix('admin')->middleware('admin')->group(function(){
+    // //Affiche page admin
+    // Route::get('/articles', [ArticleController::class, 'index'])->name('admin');
 
     //Formulaire pour créer article
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('article.create');
@@ -48,7 +48,7 @@ Route::prefix('admin')->middleware('admin')->group(function(){
 
     //Supprimer article
     Route::delete('/articles/{article:id}/delete', [ArticleController::class, 'delete'])->name('article.delete');
-});
+// });
 
 Auth::routes();
 
@@ -56,6 +56,6 @@ Auth::routes();
 
 
 
-// Route::group(['prefix' => 'admin'], function () {
-    // Voyager::routes();
-// });
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
