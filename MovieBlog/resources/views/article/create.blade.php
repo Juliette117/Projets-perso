@@ -32,6 +32,17 @@
             <br>
             <div class="col-12">
                 <div class="form-group">
+                    <label for="category">Genre</label>
+                    <select name="category" class="form-control dropdown-item">
+                        @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->label}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <br>    
+            <div class="col-12">
+                <div class="form-group">
                     <label>Contenu</label>
                     <textarea id="tinymce" name="content" class="@error('content') is-invalid @enderror"></textarea>
                     <small class="form-text text-muted">Synopsis du film</small>

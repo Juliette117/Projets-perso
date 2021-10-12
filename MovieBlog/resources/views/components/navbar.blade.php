@@ -9,7 +9,7 @@
           <li class="nav-item">
             @if(Auth::user())
             @if(Auth::user()->role === 'ADMIN')
-              <a class="nav-link active" href={{ route('admin')}}>Cassiopée</a>
+              <a class="dropdown-item" href={{ route('admin')}}>Cassiopée</a>
             @endif
             @endif
           </li>
@@ -18,9 +18,9 @@
               Elky
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{route('articles')}}">Onyxia</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Pixel</a></li>
+              <li><a class="dropdown-item" href="{{route('articles')}}">Onyxia</a>
+              
+              <a class="dropdown-item" href="#">Pixel</a></li>
             </ul>
           </li>
           <li class="nav-item">

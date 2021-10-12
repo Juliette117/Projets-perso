@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
-use App\Models\Article;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +54,8 @@ Auth::routes();
 
 
 
+
+
+// Route::group(['prefix' => 'admin'], function () {
+    // Voyager::routes();
+// });

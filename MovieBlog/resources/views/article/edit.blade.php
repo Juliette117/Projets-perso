@@ -33,6 +33,16 @@
             <br>
             <div class="col-12">
                 <div class="form-group">
+                    <label for="category">Catégories</label>
+                    <select name="category" class="form-control dropdown-item">
+                        @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" {{ $category->id === $article->category->id ? 'selected' : ''}}>{{ $category->label}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>    
+            <div class="col-12">
+                <div class="form-group">
                     <label>Contenu</label>
                     <textarea id="tinymce" name="content"  value="{{ $article->content }}" class="@error('content') is-invalid @enderror">
                         {{ $article->content }}

@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
+use App\Manager\ArticleManager;
+use App\Models\Category;
 
 class ArticleController extends Controller
 {
+    private $articleManager;
+
+    public function __construct(ArticleManager $articleManager)
+    {
+        $this->articleManager = $articleManager;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -28,7 +36,9 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('article.create');
+        return view('article.create', [
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -41,11 +51,13 @@ class ArticleController extends Controller
     {
         $validated = $request->validated();
 
-        Article::create([
-            'title' => $request->input('title'),
-            'subtitle' => $request->input('subtitle'),
-            'content' => $request->input('content')
-        ]);
+        $this->articleManager->build(new Article(), $request);
+
+        // Article::create([
+            // 'title' => $request->input('title'),
+            // 'subtitle' => $request->input('subtitle'),
+            // 'content' => $request->input('content')
+        // ]);
         return redirect()->route('admin')->with('success', "L'article a bien été crée");
     }
 
@@ -69,7 +81,8 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         return view('article.edit',[
-            'article' => $article
+            'article' => $article,
+            'categories' => Category::all()
         ]);
     }
 
@@ -82,10 +95,12 @@ class ArticleController extends Controller
      */
     public function update(ArticleRequest $request, Article $article)
     {
-        $article->title = $request->input('title');
-        $article->subtitle = $request->input('subtitle');
-        $article->content = $request->input('content');
-        $article->save();
+        $this->articleManager->build($article, $request);
+         
+        // $article->title = $request->input('title');
+        // $article->subtitle = $request->input('subtitle');
+        // $article->content = $request->input('content');
+        // $article->save();
 
         return redirect()->route('admin')->with('success', "L'article a bien été modifié");
     }

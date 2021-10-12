@@ -11,6 +11,7 @@
             <div class="card-body">
                 <h5 class="card-title fs-3">{{ $article->title}}</h5>
                 <p class="card-text fs-5">{{$article->subtitle}}</p>
+                <span class="badge rounded-pill bg-light">{{ $article->category->label }}</span>
                
             </div>        
             <a class="btn btn-outline-light" href= "{{ route('article', $article->slug) }}">Voir le synopsis</a>
