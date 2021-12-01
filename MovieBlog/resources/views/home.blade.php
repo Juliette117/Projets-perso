@@ -2,12 +2,13 @@
 
 @section('content')
 <div class="jumbotron p-4 p-md-2">
-    <h1 class=" text-center fw-bold display-2">WATCHED</h1>
+    <h1 class=" text-center fw-bold display-1">WATCHED</h1>
     <p class="text-center lead">Gotta Watch 'Em All</p>
-    <hr class="my-4">
-    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <p class="lead">
-      <a class="btn btn-outline-light " href="/articles" role="button">Learn more</a>
+    <hr class="my-5">
+    <p class="text-center">
+      <a class="row btn btn-outline-light fs-1" href="/articles" role="button">
+        Qu'est-ce qu'on mate ce soir ?  <i class="fas fa-cat"></i>
+      </a>
     </p>
   </div>
 @endsection

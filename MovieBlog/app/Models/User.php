@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Article;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -23,7 +24,7 @@ class User extends \TCG\Voyager\Models\User
         'name',
         'email',
         'password',
-        'role'
+        //'role'
     ];
 
     /**
@@ -44,4 +45,14 @@ class User extends \TCG\Voyager\Models\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+   public function likedPosts()
+   {
+       return $this->morphedByMany('App\Post', 'likeable')->whereDeletedAt(null);
+   }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }
+

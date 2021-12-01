@@ -29,6 +29,15 @@ class ArticleController extends Controller
         ]);
     }
 
+    public function show(Article $article)
+    {
+        return view('article', [
+            'article' => $article
+        ]);
+    }
+
+    
+
     /**
      * Show the form for creating a new resource.
      *
