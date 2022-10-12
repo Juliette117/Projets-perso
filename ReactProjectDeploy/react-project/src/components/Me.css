@@ -1,0 +1,34 @@
+.user {
+    position: relative;
+    text-align: center;
+}
+
+.user_name{
+    color: #003b6f;
+    font-size: 50px;
+}
+
+.user_job{
+    color: #7e7d8d;
+    text-transform: uppercase;
+}
+
+.user_avatar {
+    border-radius: 70%;
+    width: 55%;
+}
+
+.user_infos {
+    text-align: left;
+    padding: 3rem 0 var(--spacing-3) 0;
+}
+
+.user_info {
+    display: flex;
+    padding-left: 1.3rem;
+}
+
+.user_info svg {
+    color:var(--icon-color);
+    margin-right: 1rem;
+}

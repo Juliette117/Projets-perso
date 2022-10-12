@@ -1,0 +1,19 @@
+.grid_item,
+.grid_item p {
+    margin-bottom: var(--spacing-2);
+}
+
+.grid_date {
+    color: #777777b9 ;
+    font-weight:bold;
+    
+}
+
+.grid_title {
+    margin-bottom: 0;
+}
+
+.grid_location {
+    font-weight: 300;
+    color: var(--date-color);
+}
