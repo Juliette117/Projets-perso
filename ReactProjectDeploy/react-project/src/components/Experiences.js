@@ -4,7 +4,7 @@ function Experiences({data}) {
   return (
     
     <div className='cursus mb3'>
-  <h3 className='h3'>Agent</h3>
+  <h3 className='h3'>Expériences professionnelles</h3>
   <hr></hr>
   <div className='grid_row'>
       <div className='grid_item'>

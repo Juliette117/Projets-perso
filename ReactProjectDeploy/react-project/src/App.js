@@ -8,7 +8,8 @@ import { FaFilePdf, FaGithub } from 'react-icons/fa';
 import pdf from './components/CVJA.pdf';
 import pdf2 from './components/CertificationAgile.pdf';
 import pdf3 from './components/Opquast.pdf';
- 
+
+
 /*Commentaires*/
 
 function App() {
@@ -36,8 +37,8 @@ function App() {
             <p className='grid_date'>2021</p>
           </div>
             <ul className='liste'>
-              <li><a href = {pdf2} target = "blank">Certificat Agiles</a></li> <p>Méthodes Agiles de gestion et amorçage de projet</p> 
-              <li><a href = {pdf3} target = "blank" style={{marginTop:20}}>Certificat Opquast</a></li> <p>Maîtrise de la qualité en projet web</p>
+              <li><a href = {pdf2} target = "blank">Certificat Agiles</a></li> <p style={{fontSize:17}}>Méthodes Agiles de gestion et amorçage de projet</p> 
+              <li><a href = {pdf3} target = "blank" style={{marginTop:20}}>Certificat Opquast</a></li> <p style={{fontSize:17}}>Maîtrise de la qualité en projet web</p>
             </ul>
           </div>
         </div>
